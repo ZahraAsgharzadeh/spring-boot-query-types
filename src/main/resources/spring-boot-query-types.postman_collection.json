@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "c909d591-defe-43d3-8446-5d4251cd28c2",
+		"name": "spring-boot-query-types",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllWithPaginationAndFilter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sort\": {\n        \"property\": \"id\",\n        \"direction\": \"ASC\"\n    },\n    \"paginate\": {\n        \"number\": 0,\n        \"size\": 10\n    },\n    \"filters\": [\n        {\n            \"property\": \"enName\",\n            \"value\": \"c\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products-pagination-filter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-pagination-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllWithPagination",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": 0,\n    \"size\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/products-pagination",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-pagination"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllWithoutPagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products-without-pagination",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-without-pagination"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllByNativeQuery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products-without-pagination-native-query",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-without-pagination-native-query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByIdJPQL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products-jpql/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-jpql",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllByEnNameLikeJPQL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products-jpql-en-name-contains/c",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-jpql-en-name-contains",
+						"c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllByEnNameContains",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products-en-name-contains/L",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-en-name-contains",
+						"L"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByIdCriteriaQuery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products-criteria-query/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-criteria-query",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllFromFile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products-from-file",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products-from-file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
